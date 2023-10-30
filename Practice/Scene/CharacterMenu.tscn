@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=3 uid="uid://baur1f5b0ydr4"]
+
+[ext_resource type="Script" path="res://Scripts/MenuFunctions.gd" id="1_0b6lf"]
+[ext_resource type="Script" path="res://Scripts/MenuButtons.gd" id="2_vcql5"]
+
+[node name="CharacterMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0b6lf")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -83.0
+offset_top = -58.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Menu"
+script = ExtResource("2_vcql5")
+
+[node name="SubMenu" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -82.0
+offset_top = 124.0
+offset_bottom = -61.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("1_0b6lf")
+
+[node name="Button" type="Button" parent="SubMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -27.5
+offset_right = 40.0
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Character"
+script = ExtResource("2_vcql5")
+
+[node name="SubMenu" type="Control" parent="SubMenu"]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -704.0
+offset_top = -184.0
+offset_right = -245.0
+offset_bottom = 198.0
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="SubMenu/SubMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -266.5
+offset_top = -225.0
+offset_right = 267.5
+offset_bottom = 292.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ExitButton" type="Button" parent="SubMenu/SubMenu/Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -22.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "X"
